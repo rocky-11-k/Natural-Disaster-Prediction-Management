@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nature Disaster & Prediction Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & Main Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: #f1f1f1;
+            color: #333;
+        }
+
+        header {
+            background: #2d3b3a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2d3b3a;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .disasters, .prediction-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .disasters .card, .prediction-info .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .disasters .card:hover, .prediction-info .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .disasters .card img, .prediction-info .card img {
+            width: 80%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2d3b3a;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #2d3b3a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background: #ff6f61;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #e55a49;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Nature Disaster & Prediction Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#disasters">Disasters</a></li>
+                <li><a href="#prediction">Prediction</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Disasters Section -->
+    <section id="disasters">
+        <h2>Types of Natural Disasters</h2>
+        <div class="disasters">
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Earthquake">
+                <h3>Earthquake</h3>
+                <p>Earthquakes are sudden shakes or movements of the Earth's surface.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Flood">
+                <h3>Flood</h3>
+                <p>Flooding occurs when water overflows from rivers, lakes, or oceans.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Hurricane">
+                <h3>Hurricane</h3>
+                <p>A hurricane is a powerful tropical storm with strong winds and heavy rainfall.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prediction Section -->
+    <section id="prediction" class="prediction-info">
+        <h2>Disaster Prediction Information</h2>
+        <div class="card">
+            <h3>Earthquake Prediction</h3>
+            <p>We use seismic activity data to predict potential earthquakes.</p>
+        </div>
+        <div class="card">
+            <h3>Flood Prediction</h3>
+            <p>We monitor weather patterns and river levels to predict flooding events.</p>
+        </div>
+        <div class="card">
+            <h3>Hurricane Prediction</h3>
+            <p>Satellite data helps track and predict the development of hurricanes.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nature Disaster & Prediction Management. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
