@@ -1,0 +1,30 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from routers import contact
+
+app = FastAPI(
+    title="Nature Disaster & Prediction API",
+    description="Backend services for disaster management system.",
+    version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace with your frontend URL in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(contact.router, prefix="/api/contact", tags=["Contact"])
+
+@app.get("/", tags=["Root"])
+async def read_root():
+    return {"message": "Welcome to Nature Disaster & Prediction Management API"}
+from pydantic import BaseModel, EmailStr
+
+class ContactForm(BaseModel):
+    name: str
+    email: EmailStr
+    message: str
+
